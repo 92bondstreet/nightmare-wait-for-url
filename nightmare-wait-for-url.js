@@ -30,7 +30,7 @@ Nightmare.action(
                 self.child.removeListener('waitForUrl', handler);
 
                 clearTimeout(timeout);
-                done(null, true);
+                done(null, latestUrl);
             } else {
                 // If we don't match, emit again
                 self.child.emit('waitForUrl');
